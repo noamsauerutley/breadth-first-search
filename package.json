@@ -1,0 +1,12 @@
+{
+  "name": "breadth-first-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alternateBreadthFirstSearch.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
