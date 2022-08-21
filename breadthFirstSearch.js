@@ -8,7 +8,7 @@
 */
 
 // javascript object representation of the above tree
-let tree = {
+const InputTree = {
 	"10": {
 		value: "10",
 		left: "4",
@@ -46,7 +46,7 @@ let tree = {
 	},
 };
 
-let BreadthFirstSearch = (tree, rootNode, searchValue) => {
+const BreadthFirstSearch = (tree, rootNode, searchValue) => {
 	// make a queue array
 	let queue = [];
 	// populate it with the node that will be the root of your search
@@ -61,7 +61,7 @@ let BreadthFirstSearch = (tree, rootNode, searchValue) => {
 		// if currentNode is the node we're searching for, break & alert
 		if (currentNode.value === searchValue) {
 			console.log("Found it!");
-			return;
+			return true;
 		}
 
 		// if currentNode has a left child node, add it to the queue.
@@ -77,6 +77,10 @@ let BreadthFirstSearch = (tree, rootNode, searchValue) => {
 		queue.shift();
 	}
 	console.log("Sorry, no such node found :(");
+	return false;
 };
 
-module.exports = BreadthFirstSearch;
+module.exports = {
+	InputTree,
+	BreadthFirstSearch,
+};

@@ -8,7 +8,7 @@
 */
 
 // javascript object representation of the above tree
-let tree = {
+const InputTree = {
 	"10": {
 		value: "10",
 		left: "4",
@@ -46,7 +46,7 @@ let tree = {
 	},
 };
 
-let alternateBreadthFirstSearch = (tree, rootNode, searchValue) => {
+const alternateBreadthFirstSearch = (tree, rootNode, searchValue) => {
 	// make a queue array
 	let queue = [];
 	let path = [];
@@ -77,6 +77,11 @@ let alternateBreadthFirstSearch = (tree, rootNode, searchValue) => {
 		queue.shift();
 	}
 	console.log("Sorry, no such node found :(");
+
+	return [];
 };
 
-module.exports = alternateBreadthFirstSearch;
+module.exports = {
+	InputTree,
+	alternateBreadthFirstSearch,
+};
