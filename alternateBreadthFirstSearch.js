@@ -60,7 +60,7 @@ const alternateBreadthFirstSearch = (tree, rootNode, searchValue) => {
 		path.push(currentNode.value);
 
 		// if currentNode is the node we're searching for, break & alert
-		if (Number(currentNode.value) === Number(searchValue)) {
+		if (currentNode.value === searchValue) {
 			return path;
 		}
 

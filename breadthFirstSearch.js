@@ -59,7 +59,7 @@ const BreadthFirstSearch = (tree, rootNode, searchValue) => {
 		console.log("Current node is:" + currentNode.value);
 
 		// if currentNode is the node we're searching for, break & alert
-		if (Number(currentNode.value) === Number(searchValue)) {
+		if (currentNode.value === searchValue) {
 			console.log("Found it!");
 			return true;
 		}
